@@ -1,10 +1,16 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
-
+import 'package:fitness/models/category_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  List<CategoryModel> categories =[];
+
+  void _getCategories() {
+    categories = CategoryModel.getcategories();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +18,35 @@ class HomePage extends StatelessWidget {
       appBar: appBar(),
       backgroundColor: Colors.white,
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _searchField()
+          _searchField(),
+              SizedBox(height: 40,),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left:20),
+                    child: Text(
+                      'Category',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),SizedBox(height:15,),
+                  Container(
+                    height:150,
+                    color: Colors.green,
+                    child: ListView.builder(
+                      itemBuilder: (context, index) {
+                        return Container();
+                      }
+                    ),
+                  ),
+                ],
+              )
         ],
       )
     );
@@ -38,7 +71,7 @@ class HomePage extends StatelessWidget {
               contentPadding: EdgeInsets.all(15),
               hintText: 'Search Pancake',
               hintStyle: TextStyle(
-                color:Color(0xffDDDADA),
+                color:Color.fromARGB(255, 131, 80, 4),
                 fontSize: 14,
               ),
               prefixIcon: Padding(
