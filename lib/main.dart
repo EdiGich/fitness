@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:fitness/home.dart';
+import 'package:fitness/pages/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins'),
 
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
