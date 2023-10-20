@@ -15,6 +15,8 @@ class DietModel {
     required this.viewIsSelected
   });
 
+  get boxColor => null;
+
   static List < DietModel > getDiets() {
     List < DietModel > diets = [];
 
