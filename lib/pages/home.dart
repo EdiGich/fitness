@@ -153,14 +153,14 @@ class HomePage extends StatelessWidget {
         ),
         Container(
           color: Colors.blue,
-          height: 200,
+          height: 210,
           child: ListView.separated(
             itemBuilder: (context, index) {
               return Container(
                 width: 210,
                 decoration: BoxDecoration(
                   // color: Color(0xff1D1617).withOpacity(0.11),
-                  color: diets[index].boxColor.withOpacity(0.3),
+                  color: diets[index].boxColor,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -188,8 +188,8 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      height: 45,
-                      width: 130,
+                      height: 25,
+                      width: 100,
                       child: Center(
                         child: Text(
                           'View',
@@ -252,10 +252,10 @@ class HomePage extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 15,
+          height: 10,
         ),
         Container(
-          height: 120,
+          height: 100,
           // color: Colors.green,
           child: ListView.separated(
             itemCount: categories.length,
@@ -321,7 +321,7 @@ class HomePage extends StatelessWidget {
             ),
             prefixIcon: Padding(
               padding: const EdgeInsets.all(12),
-              child: SvgPicture.asset('assets/icons/Search.svg'),
+              child: SvgPicture.asset('assets/icons/salmon.svg'),
             ),
             suffixIcon: Container(
               width: 100,
