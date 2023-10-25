@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../models/diet_model.dart';
 import '../models/popular_model.dart';
-
+//TO DO Addition of a next screen when a food item is clicked.
+//To DO Fixing of the overflow error
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
